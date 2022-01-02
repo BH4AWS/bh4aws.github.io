@@ -27,7 +27,7 @@ jobs:
             git config --global user.email "bh4aws@163.com"
             git config --global user.name "bh4aws@163.com"
             echo "machine github.com login"
-            GIT_USER=bh4aws@163.com USE_SSH=true yarn deploy
+            GIT_USER=bh4aws@163.com USE_SSH=true npm run start
 
 workflows:
   # Below is the definition of your workflow.
