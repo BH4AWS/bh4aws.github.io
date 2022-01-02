@@ -7,10 +7,6 @@ jobs:
   build-and-test:
     docker:
       - image: cimg/node:16.10
-    filters:
-      branches:
-        only:
-        - master
     steps:
       - checkout
       - run:
@@ -19,7 +15,7 @@ jobs:
             git config --global user.email "bh4aws@163.com"
             git config --global user.name "bh4aws@163.com"
             echo "machine github.com login bh4aws@163.com password $GITHUB_TOKEN" > ~/.netrc
-            npm install && GIT_USER=bh4aws@163.com npm run deploy
+            npm install && GIT_USER=bh4aws@163.com npm run deploy master
 workflows:
   sample:
     jobs:
