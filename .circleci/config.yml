@@ -27,7 +27,7 @@ jobs:
             git config --global user.email "bh4aws@163.com"
             git config --global user.name "bh4aws@163.com"
             echo "machine github.com login"
-            npm install && GIT_USER=bh4aws@163.com npm run publish-gh-pages
+            npm install && GIT_USER=bh4aws@163.com npm deploy
 
 workflows:
   # Below is the definition of your workflow.
